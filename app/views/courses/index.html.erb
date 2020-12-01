@@ -1,2 +1,11 @@
-<h1>Courses#index</h1>
-<p>Find me in app/views/courses/index.html.erb</p>
+<h1>All Courses</h1>
+<%= link_to 'Add Course', new_course_path %>
+<hr />
+<h2><%= @courses.length <= 0 ? "no courses" : '' %></h2>
+<ul>
+  <% @courses.each do |course| %>
+    <li>
+      <%= link_to course.name, course %>
+    </li>
+  <% end %>
+</ul>

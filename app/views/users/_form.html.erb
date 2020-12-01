@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, required: true, autofocus: true %>
+  
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true %>
+
+  <%= f.submit %>
+<% end %>

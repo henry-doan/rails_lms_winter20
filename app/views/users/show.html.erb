@@ -1,2 +1,12 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<h1><%= @user.full_name %></h1>
+<hr />
+<h2>Courses</h2>
+<ul>
+  <% @user.courses.each do |course| %>
+    <li>
+      <%= link_to course.name, course %>
+    </li>
+  <% end %>
+</ul>
+<br />
+<%= link_to 'Delete User', @user, method: :delete %>

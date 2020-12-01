@@ -1,0 +1,9 @@
+
+<%= form_for @course do |f|  %>
+
+<%# form_with(model: @course, local: true, class: 'styled form') do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true, placeholder: 'course name' %>
+  
+  <%= f.submit %>
+<% end %>
